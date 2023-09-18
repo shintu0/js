@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- http://localhost:3000/profile?name=Shri Ram -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+</head>
+
+<body>
+  <!-- load common file render as html -->
+  <%- include("common/header") %>
+    <h1>Profile</h1>
+    <!-- render javascript values to html -->
+    <h2>Welcome <%= user.name %>
+    </h2>
+    <h3> Country:</h3>
+    <div>
+      <!-- write pure javascript -->
+      <% countries.map( (country)=>{%>
+        <li>
+          <%= country %>
+        </li>
+        <%}) %>
+    </div>
+
+</body>
+
+</html>
